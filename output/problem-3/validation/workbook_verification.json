@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "failures": [],
+  "rows_including_header": 3450,
+  "columns": 22,
+  "numeric_moisture_cells": 72429,
+  "maximum_roundtrip_difference": 0.0,
+  "format_errors": 0,
+  "regular_rows": 3448,
+  "extra_actual_end_time_s": 206916.6689086914,
+  "table5_checked_points": 50
+}

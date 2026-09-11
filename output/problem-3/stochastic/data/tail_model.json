@@ -1,0 +1,33 @@
+{
+  "window_s": [
+    12600,
+    14400
+  ],
+  "tail_mean": [
+    50.01325806451614,
+    0.049988709677419356
+  ],
+  "fluctuation_stats": {
+    "T": {
+      "mean": 50.01325806451613,
+      "sigma": 0.15542707016406462,
+      "acf1": -0.09201876690716117,
+      "slope_per_s": -4.448924731177681e-06
+    },
+    "C": {
+      "mean": 0.04998870967741936,
+      "sigma": 0.00012933385468523651,
+      "acf1": 0.015621585298306108,
+      "slope_per_s": -5.86693548387044e-08
+    }
+  },
+  "tau_s": null,
+  "dt_env_s": 60.0,
+  "ar1_phi": {
+    "T": 0.0,
+    "C": 0.015621585298306108
+  },
+  "sigma_scale": 1.0,
+  "model": "T_inf(t)=mean_T+sigma_T*z_T(t); C_inf(t)=mean_C+sigma_C*z_C(t); z is a clipped AR(1) with unit variance; by default phi is the observed lag-1 autocorrelation at the 60 s cadence, matching the measured frequency",
+  "detrending": "linear fit over the last observed 30 min"
+}
