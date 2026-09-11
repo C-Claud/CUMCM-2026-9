@@ -28,8 +28,8 @@
   "src\\problem-2\\问题2_审查报告.md": "450637be4d40deb89b868c76f44281a10afc065981910a0b3431ea131fe76849",
   "src\\problem-2\\问题2_模型与算法说明.md": "12ce030d48a2b67b72d23e9e71292b9d594860b66bc9981f74201ce653dfb282",
   "src\\problem-2\\问题2_解题框架与公式推导.md": "da7bda288554b92d71f0c02589568a18800e9035f750bdca270d3f3c6ebbaadd",
-  "src\\problem-3\\ensemble_problem3.py": "3253b03af00459b9bdefb7560ef454fb9e24ebc8108951d24fdbb903aaa3e49a",
-  "src\\problem-3\\generate_figures.py": "89ee0c775577fcd6c111a24804e07310cba915d4f3c4e37bb523100a6f821648",
+  "src\\problem-3\\ensemble_problem3.py": "8846ddb7845f8ece12fc3f34172a9b43165128373db0f9d21d0066daa016b388",
+  "src\\problem-3\\generate_figures.py": "dadf7ab846d7f2289152c7e836e1946673513656e095a590eb87d602f3965b99",
   "src\\problem-3\\node_modules\\@img\\colour\\LICENSE.md": "e2eaa4603c14cb26f301e88648c12a853fa3f0f5da6d4b0972958c666e7f2ab8",
   "src\\problem-3\\node_modules\\@img\\colour\\README.md": "be7edf3bc6467f761168cef3bb2b9b3def2532c98a86249848376ea00338ad1d",
   "src\\problem-3\\node_modules\\@img\\sharp-win32-x64\\README.md": "280e7d164420cfc1a1b192a582bf53e3dba97b86a5c3575f878b674ad1d41e13",
@@ -343,8 +343,8 @@
   "src\\problem-3\\node_modules\\zlibjs\\ChangeLog.md": "d84bc31a9edad781315307ccb3d8116f6384a775cae0023c6a70f2c4e44eff2f",
   "src\\problem-3\\node_modules\\zlibjs\\README.en.md": "1d1dd4e652133de680b32300c3c087612efb0619cfbfdcd303c65e90c759c165",
   "src\\problem-3\\node_modules\\zlibjs\\README.md": "c65f2d2e0dcff8f2c185036a737eb1b59667b9c56b8a6ec920bfc2a16bbb3a4d",
-  "src\\problem-3\\README.md": "0ba19b198fec10d0355d220ce95255408aa422b94927830e35eaec50b758ecbb",
-  "src\\problem-3\\solve_problem3.py": "f99c521141f2f829ceb1d7a5fa7c0b002f6711a88481914745b765ba2929827b",
-  "src\\problem-3\\模型与算法说明.md": "96748fc252c7f6bd34f587c5a0bdc3f03e55501fd517483524d939b2322ebcec",
-  "src\\problem-3\\问题3_审查报告.md": "a86d81679913e0a547a86eb37cb47cf6137179d1aef411ba2de9b0e7d849e4bc"
+  "src\\problem-3\\README.md": "abf138ff903c17b62cf6459b8e19d0472048c8f3ceb22716c94805ec63f363be",
+  "src\\problem-3\\solve_problem3.py": "3ddc46d29d91c43ed5b58c6e8be883f1bb06c6250f1d1ff6c16b182016a09c2a",
+  "src\\problem-3\\模型与算法说明.md": "51b2dda1ccb4e30a8af340c5331758cdded0563281e6320935e45fb9faaa0ee9",
+  "src\\problem-3\\问题3_审查报告.md": "91b304699c098daf6ac1c292952fbbd15546282722b07b6c346e6734d21bd69a"
 }

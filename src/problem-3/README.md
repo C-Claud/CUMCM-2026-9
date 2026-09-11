@@ -1,6 +1,6 @@
 # 第三问复现与交付
 
-全部计算从均匀初值 28°C、2.55 kg/kg 重新开始，附录 3 局部物性、固定半径 0.02 m、长度 0.25 m。主方案在 14400 s 后同时固定末次温度和环境水分浓度，均值情景仅替换观测区间之后的边界；另有一个独立的平台期随机波动集合（AR(1)）用于量化环境波动对临界时间的影响。详细推导见[模型与算法说明](模型与算法说明.md)（连续编号公式 1–73），计算结果和全部证据见 `output/problem-3/delivery/结果与验证.md`。
+全部计算从均匀初值 28°C、2.55 kg/kg 重新开始，附录 3 局部物性、固定半径 0.02 m、长度 0.25 m。主方案在 14400 s 后同时固定末次温度和环境水分浓度，均值情景仅替换观测区间之后的边界；另有一个独立的平台期随机波动集合（AR(1)）用于量化环境波动对临界时间的影响。详细推导见[模型与算法说明](模型与算法说明.md)（连续编号公式 1–74），计算结果和全部证据见 `output/problem-3/delivery/结果与验证.md`。
 
 ## 运行环境
 
@@ -73,7 +73,7 @@ python -B -X utf8 src/problem-3/solve_problem3.py --case fluct_demo --n 800 --fa
 | `generate_figures.py` | **独立绘图**：从已保存案例与 `verification.json` 生成 4 幅主图（SVG+PNG）到 `output/problem-3/figures`；无验证数据时仍绘 3 幅（`--require-full` 强制完整）；若存在随机集合数据，再为每个种子生成一幅 `temperature_and_environment_seed{N}`（空气温度/水分，`--no-stochastic` 可关闭） |
 | `ensemble_problem3.py` | **随机集合**：平台期 AR(1) 波动的 Monte Carlo，统计临界时间分布并写入 `output/problem-3/stochastic` |
 | `build_workbook.mjs` | 从 `delivery/workbook_payload.json` 导出 `delivery/result3.xlsx` 并保留 Sheet1/A1、21 个距离列与四位小数显示 |
-| `模型与算法说明.md` | 连续编号公式 1–73、完整模型、推导、参数、假设、随机平台模型与指标 |
+| `模型与算法说明.md` | 连续编号公式 1–74、完整模型、推导、参数、假设、随机平台模型与指标 |
 
 ## 输出目录结构
 

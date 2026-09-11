@@ -195,8 +195,12 @@ def plateau_fluctuation_stats(values, window_start=12600.0):
         residual = y - (slope * t + intercept)
         sigma = float(residual.std(ddof=1))
         acf1 = float(np.corrcoef(residual[:-1], residual[1:])[0, 1]) if sigma > 0 else 0.0
+        z_sample = (residual - residual.mean()) / sigma if sigma > 0 else residual * 0.0
         stats[key] = {"mean": float(y.mean()), "sigma": sigma, "acf1": acf1,
-                      "slope_per_s": float(slope)}
+                      "slope_per_s": float(slope),
+                      "kurtosis": float(((z_sample**4).mean())),
+                      "max_abs_z": float(np.abs(z_sample).max()),
+                      "z_sample": [float(v) for v in z_sample]}
     return stats
 
 
@@ -250,10 +254,19 @@ class Environment:
             else:
                 p = float(np.exp(-self.dt_env / self.tau_s))
             phi[key] = p
-            eps = rng.standard_normal(grid.size)
+            # Innovation bootstrap: resample the standardized observed residual
+            # so the fluctuation amplitude distribution (and its bounded,
+            # platykurtic extremes) matches the record instead of using a
+            # Gaussian tail that creates spurious spikes.
+            sample = np.asarray(self.stats[key]["z_sample"], dtype=float)
+            if sample.size and sample.std() > 0:
+                sample = (sample - sample.mean()) / sample.std()
+                eps = sample[rng.integers(0, sample.size, grid.size)]
+            else:
+                eps = rng.standard_normal(grid.size)
             z[j] = np.clip(lfilter([np.sqrt(1.0 - p**2)], [1.0, -p], eps), -4.0, 4.0)
         self.fluct = {"grid": grid, "z": z, "sigma": sigma, "phi": phi,
-                      "dt_env_s": self.dt_env}
+                      "dt_env_s": self.dt_env, "innovation": "observed-residual bootstrap"}
 
     def __call__(self, t):
         """Query the actual boundary at each internal implicit stage time."""

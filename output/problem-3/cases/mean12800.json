@@ -85,7 +85,9 @@
   },
   "tail_model": "mean30",
   "seed": null,
-  "tau_s": 1800.0,
+  "tau_s": null,
+  "dt_env_s": 60.0,
+  "ar1_phi": null,
   "sigma_scale": 1.0,
   "fluctuation_stats": null,
   "steps": 27748,
@@ -121,6 +123,6 @@
   ],
   "horizon_extensions": [],
   "end_argmax_r_m": 0.0,
-  "runtime_s": 353.6107978000073,
+  "runtime_s": 332.0265681000019,
   "all_necessary_numerical_checks": "PENDING_CONVERGENCE"
 }
